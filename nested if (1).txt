@@ -1,0 +1,137 @@
+#Write a Python program to count the number of even and odd numbers in a series of numbers
+
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+
+even_num = 0
+odd_num = 0
+
+for item in numbers:
+    if item%2 == 0:
+        even_num +=1
+    else:
+        odd_num +=1
+        
+print(f"{even_num} even numbers are present in{numbers}")
+print(f"{odd_num} odd numbers are present in{numbers}")
+
+
+'''
+4 even numbers are present in(1, 2, 3, 4, 5, 6, 7, 8, 9)
+5 odd numbers are present in(1, 2, 3, 4, 5, 6, 7, 8, 9)
+'''
+-----------------------------------------------------------------------------
+#Write a Python program that prints each item and its corresponding type from the following list.
+datalist = [1452, 11.23, 1+2j, True, 'w3resource', (0, -1), [5, 12], {"class":'V', "section":'A'}]
+
+for item in datalist:
+    if type(item)== int:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== float:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== complex:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== bool:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== str:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== tuple:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== list:
+        print(f'{item} is an {type(item)}')
+    elif type(item)== dict:
+        print(f'{item} is an {type(item)}')
+
+'''
+1452 is an <class 'int'>
+11.23 is an <class 'float'>
+(1+2j) is an <class 'complex'>
+True is an <class 'bool'>
+w3resource is an <class 'str'>
+(0, -1) is an <class 'tuple'>
+[5, 12] is an <class 'list'>
+{'class': 'V', 'section': 'A'} is an <class 'dict'>
+'''
+------------------------------------------------------------------------------------------------
+
+#Write a Python program that accepts a string and calculates the number of digits and letters.
+
+
+input_str = input("Please enter here:-")
+
+
+
+total_letters = 0
+
+total_numbers = 0
+
+
+
+for item in input_str:
+
+    if item.isalpha():
+
+        total_letters +=1
+
+    elif item.isdigit():
+
+        total_numbers += 1
+
+
+
+print(f"No of letters in {input_str} are {total_letters}")
+
+print(f"No of numbers in {input_str} are {total_numbers}")
+
+
+'''
+Please enter here:-gnjhjghjk654654
+
+No of letters in gnjhjghjk654654 are 9
+No of numbers in gnjhjghjk654654 are 6
+'''
+----------------------------------------------------------------------------------------------
+
+first_str = "am first"
+
+
+if first_str: #checking first_str is having value are not
+ 
+   first_str = "am second"
+
+    if first_str:
+
+        first_str = "am third"
+
+        
+print(f"{first_str}")
+
+
+am third
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

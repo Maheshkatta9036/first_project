@@ -1,0 +1,62 @@
+#Arithmatic operators
+first_number = int(input('enter the first number:-'))
+second_number = int(input('enter the second number:-'))
+
+print(f"\nAddition of {first_number} and {second_number} is:-  {first_number + second_number}")
+
+print(f"\nsubstraction of {first_number} and {second_number} is:-  {first_number - second_number}")
+
+print(f"\ndivision of {first_number} and {second_number} is:-  {first_number / second_number}")
+
+print(f"\nmodules of {first_number} and {second_number} is:-  {first_number % second_number}")
+
+print(f"\nfloor division of {first_number} and {second_number} is:-  {first_number // second_number}")
+
+print(f"\npower of {first_number} and {second_number} is:-  {first_number ** second_number}")
+----------------------------------------------------------------------------------------------------
+enter the first number:-13
+enter the second number:-4
+
+Addition of 13 and 4 is:-  17
+
+substraction of 13 and 4 is:-  9
+
+division of 13 and 4 is:-  3.25
+
+modules of 13 and 4 is:-  1
+
+floor division of 13 and 4 is:-  3
+
+power of 13 and 4 is:-  28561
+
+======================================================================================================
+
+#Equality operators
+user = input('\nplease enter the userid:-')
+
+input_one = input('first input:-')
+
+input_two = input('second input:-')
+print(f"\nuser {user}  performing {input_one} == {input_two} is {input_one == input_two} ")
+
+print(f"\nuser {user}  performing {input_one} <= {input_two} is {input_one == input_two} ")
+
+print(f"\nuser {user}  performing {input_one} >= {input_two} is {input_one == input_two} ")
+
+print(f"\nuser {user}  performing {input_one} <> {input_two} is {input_one == input_two} ")
+
+print(f"\nuser {user}  performing {input_one} != {input_two} is {input_one == input_two} ")
+--------------------------------------------------------------------------------------------------------
+please enter the userid:-1234
+first input:-12
+second input:-8
+
+user 1234  performing 12 == 8 is False 
+
+user 1234  performing 12 <= 8 is False 
+
+user 1234  performing 12 >= 8 is False 
+
+user 1234  performing 12 <> 8 is False 
+
+user 1234  performing 12 != 8 is False 

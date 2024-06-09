@@ -1,0 +1,105 @@
+default_input = 15
+
+first_input = int(input("please enter the first input:-"))
+
+if default_input == first_input:
+    print(f'{first_input} == {default_input} is true')
+else:
+    print(f"{first_input} is not equal to {default_input}")
+    
+"""
+please enter the first input:-15
+15 == 15 is true
+---------------
+please enter the first input:-12
+12 is not equal to 15
+"""
+
+-------------------------------------------------------
+if "":
+    print('i am empty')
+else:
+    print('i am default else block')
+#i am default else block    
+
+if " ":
+    print('i am empty space')
+else:
+    print('i am default else block')
+#i am empty space  
+if "Hi":
+    print('Hi')
+else:
+    print('i am default else block')
+#hi
+
+------------------------------------------------------------
+if {}:
+    print('i am empty dict')
+else:
+    print('default else block')
+#default else block
+
+if {'i am not': 'empty dict'}:
+    print('am not empty dict')
+else:
+    print('default else block')
+#am not empty dict
+---------------------------------------------------------------
+
+default_value = 1234
+
+user_input = int(input("please enter the input:-"))
+
+if default_value == user_input:
+    print('both are equal')
+elif user_input == 3456:
+    print(f'{user_input} is equal to 3456')
+else:
+    print('user input is not equal to default_value')
+
+"""
+#1 if block
+please enter the input:-1234
+both are equal
+
+#2 elif block
+please enter the input:-3456
+3456 is equal to 3456
+
+#3 else block
+please enter the input:-6767
+user input is not equal to default_value
+"""
+-----------------------------------------------------------------
+
+
+print("Hello user")
+print("Good to see you again here")
+
+user_pin = 9999
+user_answer = 'bruno'
+
+input_pin = int(input("please enter your pin for furthur process:-"))
+
+if user_pin == input_pin:
+    print("Your balance is 1000")
+elif user_pin != input_pin:
+    print("Dear user,")
+    print("you have entered incorrect pin")
+    print("please answer the question to show your balance")
+    if user_answer == input("enter the pet name.?"):
+        print("your balance is 1000")
+else:
+    print("There is an error validating user")
+
+"""
+Hello user
+Good to see you again here
+please enter your pin for furthur process:-1234
+Dear user,
+you have entered incorrect pin
+please answer the question to show your balance
+enter the pet name.?bruno
+your balance is 1000
+"""

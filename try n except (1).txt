@@ -1,0 +1,126 @@
+#Write a Python program that asks the user to enter a sequence of numbers separated by spaces. The program should print each number until it encounters a negative number, at which point it should stop printing and exit the loop
+
+
+
+input_num  = input('please enter the numbers here:-')
+
+l_str = input_num.split(' ')
+
+
+
+
+for num in l_str:
+
+    try:
+
+        if int(num):
+
+            if int(num)<0:
+
+                print(f'\n{num} is a negative number')
+
+            else:
+
+                continue
+
+        else:
+
+            raise Exception ('\nString has been entered')
+
+    except Exception as e:
+
+        print(f'\n{num} is a string {e}')
+
+
+
+
+
+'''
+
+please enter the numbers here:-54545 klkl 5454
+
+-5454
+
+klkl is a string invalid literal for int() with base 10: 'klkl'
+
+
+-5454 is a negative number
+
+
+'''
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#Create a program that prompts the user to enter their age. Handle the ValueError exception if the input cannot be converted to an integer.
+
+age = input('Please enter the age:-')
+
+try:
+    if age:
+        try:
+            actual_age = int(age)
+            print('Hello..!')
+            print(f'your age is {actual_age}')
+        except Exception as err:
+            raise ValueError('age should be a number')
+except Exception as e:
+    print(e)
+    
+'''
+Please enter the age:-sa
+age should be a number
+-------------------------
+
+Please enter the age:-23
+Hello..!
+your age is 23
+'''
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+#Create a dictionary my_dict = {"a": 1, "b": 2, "c": 3}. Try to access the value associated with the key "d". Handle the KeyError exception.
+
+my_dict = {'name':'mahesh', 'age':25, 'experience':3}
+
+user_input = input('Please enter the name:-')
+
+try:
+    if my_dict['name'] == user_input:
+        print(f'{my_dict["name"]} age is ', my_dict['age'])
+        
+    else:
+        raise KeyError (f'{user_input} is not found')
+except Exception as err:
+    print(err)
+    
+'''
+Please enter the name:-uiuih
+'uiuih is not found'
+----------------------------
+
+Please enter the name:-mahesh
+mahesh age is  25
+'''
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Create a list my_list = [1, 2, 3, 4, 'five', 6, 7]. Iterate over the list and try to convert each element to an integer. Handle the ValueError exception if conversion fails.
+
+
+my_list = ['1', 2, '3', 4, 'five', '6', '7']
+
+try:
+    for item in my_list:
+        if item == 2:
+            continue
+        elif item == 4:
+            continue
+        else:
+            number = int(item)
+    raise ValueError(f'cannot be converted to intiger')
+except Exception as ee:
+    print(f'Error is:-{ee}')
+    
+'''
+Error is:-invalid literal for int() with base 10: 'five'
+'''
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------

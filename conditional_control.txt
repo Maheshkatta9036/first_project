@@ -1,0 +1,205 @@
+#Write a  Python program to find those numbers which are divisible by 7 and multiples of 5, between 1500 and 2700 (both included).
+
+input_num = range(1500, 2701)
+
+result = []
+
+for item in input_num:
+    if (item%7 == 0) and (item %5 ==0):
+        result.append(item)
+        
+print(result)
+
+'''
+[1505, 1540, 1575, 1610, 1645, 1680, 1715, 1750, 1785, 1820, 1855, 1890, 1925, 1960, 1995, 2030, 2065, 2100, 2135, 2170, 2205, 2240, 2275, 2310, 2345, 2380, 2415, 2450, 2485, 2520, 2555, 2590, 2625, 2660, 2695]
+'''
+-------------------------------------------------------------------
+
+#Write a  Python program to find a list of integers with exactly two occurrences of nineteen and at least three occurrences of five. Return True otherwise False.
+in_put = [19, 19, 15, 5, 3, 5, 5, 2]
+
+nine_teen = 0
+five = 0
+
+for item in in_put:
+    if item == 19:
+        nine_teen += 1
+        if nine_teen == 2:
+            print(True)
+            print('Yes there are 2 occurrences of 19')
+    elif item == 5:
+        five += 1
+        if five == 3:
+            print(True)
+            print('Yes there are 3 occurences of 5')
+
+'''
+True
+Yes there are 2 occurrences of 19
+True
+Yes there are 3 occurences of 5
+'''
+
+------------------------------------------------------------------------------------------------------
+
+#Write a  Python program to split a string of words separated by commas and spaces into two lists, words and separators.
+
+input_str = 'The dance, held in the school gym, ended at midnight'
+
+words_list = []
+coma_list = []
+
+#splitting the words based on spaces
+words_list.append(input_str.split())
+
+#looping the words and adding comma's based on the no of words  
+for item in words_list:
+    for item in item:
+
+        coma_list.append(',')
+words_list.append(coma_list)
+
+print(f'Total no of words {words_list}')
+
+'''
+Total no of words [['The', 'dance,', 'held', 'in', 'the', 'school', 'gym,', 'ended', 'at', 'midnight'], [',', ',', ',', ',', ',', ',', ',', ',', ',', ',']]
+'''
+
+-----------------------------------------------------------------------------------------------------------------------
+
+#Write a Python program to find the length of a given list of non-empty strings.
+
+given_list = ['uidh', 'whuihi', '', '8yhe3oj9', 'eh2387h9', '', 'jiw']
+len_dict = {}
+
+for item in given_list:
+    if len(item)>0:
+        len_dict[item]=len(item)
+        
+print(f'len of each item {len_dict}')
+
+'''
+len of each item {'uidh': 4, 'whuihi': 6, '8yhe3oj9': 8, 'eh2387h9': 8, 'jiw': 3}
+'''
+--------------------------------------------------------------------------------------------------------------------------
+
+#Write a  Python program to find the longest string in a given list of strings.
+
+my_list = ['cat', 'car', 'fear', 'center']
+
+longest_word = ''
+
+for item in my_list:
+    print(f'comparing the length of {item} and {longest_word}')
+    if len(item)> len(longest_word):
+        print(f'{item} is the longest word than {longest_word}')
+        longest_word = item
+        
+print(f'{longest_word} is the longest word among {my_list}')
+
+'''
+comparing the length of cat and 
+cat is the longest word than 
+comparing the length of car and cat
+comparing the length of fear and cat
+fear is the longest word than cat
+comparing the length of center and fear
+center is the longest word than fear
+center is the longest word among ['cat', 'car', 'fear', 'center']
+'''
+==============================
+
+my_list = ['cat', 'dog', 'shatter', 'donut', 'at', 'todo', '']
+
+longest_word = ''
+
+for item in my_list:
+    print(f'comparing the length of {item} and {longest_word}')
+    if len(item)> len(longest_word):
+        print(f'{item} is the longest word than {longest_word}')
+        longest_word = item
+        
+print(f'{longest_word} is the longest word among {my_list}')
+
+
+'''
+comparing the length of cat and 
+cat is the longest word than 
+comparing the length of dog and cat
+comparing the length of shatter and cat
+shatter is the longest word than cat
+comparing the length of donut and shatter
+comparing the length of at and shatter
+comparing the length of todo and shatter
+comparing the length of  and shatter
+shatter is the longest word among ['cat', 'dog', 'shatter', 'donut', 'at', 'todo', '']
+'''
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+#Write a Python program to select a string from a given list of strings with the most unique characters.
+
+my_list = ['cat', 'catatatatctsa', 'abcdefhijklmnop', '124259239185125', '', 'foo', 'unique']
+
+count = 0
+unique_char = ''
+
+for item in my_list:
+    if count <= len(set(item)):
+        count = len(set(item))
+        unique_char = item
+            
+print(f'{unique_char} is the word with most unique charecters')
+
+'''
+abcdefhijklmnop is the word with most unique charecters
+'''
+----------------------------------------------------------------------------------------------------------
+
+#PROGRAM TO SUM THE NUMBERS IN THE LIST
+
+Input= [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+count_dict ={}
+
+for item in Input:
+    count = 0
+    for i in str(item):
+        count += int(i)
+        count_dict[item] = count 
+
+print(count_dict)
+
+'''
+{10: 1, 11: 2, 12: 3, 13: 4, 14: 5, 15: 6, 16: 7, 17: 8, 18: 9, 19: 10, 20: 2}
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

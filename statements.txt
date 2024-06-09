@@ -1,0 +1,243 @@
+#Write a program that asks the user to enter a password. If the password is less than 8 characters long, keep prompting the user to enter a valid password until they do. Use a while loop with a break statement to exit the loop once the password is valid.
+
+password = input("Please enter the password here:-")
+actual_password = '12345678'
+
+while len(password)<8 or actual_password != password:
+    print('entered less no of digits')
+    if len(password)>=8:
+        print('Entered password is wrong')
+    password = input("Please enter the Eight digit password here:-")
+    if actual_password == password:
+        print("password is correct")
+        break
+    else:
+        continue
+
+'''
+
+Please enter the password here:-ddj9eijdodje
+entered less no of digits
+Entered password is wrong
+Please enter the Eight digit password here:-edjwe9dj9wejdw
+entered less no of digits
+Entered password is wrong
+Please enter the Eight digit password here:-d8hded
+entered less no of digits
+Please enter the Eight digit password here:-12345678
+password is correct
+
+'''
+-------------------------------------------------------------------------------
+
+#Write a program that prints all even numbers from 1 to 50 using a for loop. Use the continue statement to skip odd numbers.
+
+my_nums = range(1, 51) #defining 1 beacause range starts from 0
+even_list = []
+
+for number in my_nums:
+    
+    if number%2==0:
+        print(f'{number} is a even number')
+        even_list.append(number)
+    else:
+        continue
+
+print(f'{even_list} are the even_numbers from the range of 1 to 50')
+
+'''
+2 is a even number
+4 is a even number
+6 is a even number
+8 is a even number
+10 is a even number
+12 is a even number
+14 is a even number
+16 is a even number
+18 is a even number
+20 is a even number
+22 is a even number
+24 is a even number
+26 is a even number
+28 is a even number
+30 is a even number
+32 is a even number
+34 is a even number
+36 is a even number
+38 is a even number
+40 is a even number
+42 is a even number
+44 is a even number
+46 is a even number
+48 is a even number
+50 is a even number
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50] are the even_numbers from the range of 1 to 50
+'''
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+#Write a program that takes a string as input from the user and counts the number of vowels (a, e, i, o, u) in the string. Use a for loop to iterate over each character in the string. If the character is a vowel, increment a counter variable. Print the total count of vowels at the end.
+
+input_str = input('please enter the input here:-')
+
+vowels = ['a','e','i', 'o', 'u']
+vowel_count = 0
+
+for item in input_str:
+    if item in vowels:
+        vowel_count += 1
+        
+print(f'In the given input:{input_str}, There are {vowel_count} no of vowels')
+
+'''
+please enter the input here:-eowioiwwxn
+In the given input:eowioiwwxn, There are 5 no of vowels
+
+'''
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+#Write a program that generates the multiplication table of a given number (from 1 to 10). Use nested for loops to iterate over the multiplicand and multiplier. Print each multiplication result in a formatted way.
+
+input_num = int(input('please enter the number for table:-'))
+
+for number in range(1,11):
+    cal = input_num * number
+    print(f'{input_num} x {number} = {cal}')
+
+'''
+please enter the number for table:-4
+4 x 1 = 4
+4 x 2 = 8
+4 x 3 = 12
+4 x 4 = 16
+4 x 5 = 20
+4 x 6 = 24
+4 x 7 = 28
+4 x 8 = 32
+4 x 9 = 36
+4 x 10 = 40
+'''
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#Write a program that takes a list of numbers as input and removes all even numbers from the list. Use a for loop to iterate over the elements of the list and remove the even numbers using list comprehension or the remove() method.
+
+my_list = [1,2,3,4,5,6,7,8,9,0,34,45,21,4,5,45,212,4545,45,3,8]
+print(f'List with even Numbers:- {my_list}\n')
+for item in my_list:
+    if item%2 == 0:
+        print(f'{item} is an even number, So removing it')
+        my_list.remove(item)
+        
+print('\nUpdated list after removing all the even number')
+print(my_list)
+
+'''
+List with even Numbers:- [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 34, 45, 21, 4, 5, 45, 212, 4545, 45, 3, 8]
+
+2 is an even number, So removing it
+4 is an even number, So removing it
+6 is an even number, So removing it
+8 is an even number, So removing it
+0 is an even number, So removing it
+4 is an even number, So removing it
+212 is an even number, So removing it
+8 is an even number, So removing it
+
+Updated list after removing all the even number
+[1, 3, 5, 7, 9, 34, 45, 21, 5, 45, 4545, 45, 3]
+
+'''
+----------------------------------------------------------------------------------------------------------------------
+
+#Write a program that takes a string as input and counts the frequency of each character in the string. Use a dictionary to store the counts, with characters as keys and their frequencies as values. 
+
+input_str = input('please enter the input here:-')
+
+count_dict = {}
+
+for item in input_str:
+    if  item in count_dict:
+        v = count_dict.get(item)
+        count_dict[item]= v+1
+    else:
+        count_dict[item] = 1
+        
+print('\n',count_dict)
+
+'''
+please enter the input here:-wryrwwrtyyru
+
+ {'w': 3, 'r': 4, 'y': 3, 't': 1, 'u': 1}
+
+'''
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+#Write a program that prompts the user to enter an email address and checks if it is valid according to a simple set of rules (e.g., presence of "@" and ".").
+
+email = input('enter the gmail here:-')
+
+if '@' in email:
+    if email.endswith('.com'):
+        print('Entered mail is correct')
+    else:
+        print('email should end with .com')
+else:
+    print(f'\n{email} is not a valid mail')
+    
+'''
+enter the gmail here:-jdiejodwed
+
+jdiejodwed is not a valid mail
+-----------------------------
+
+enter the gmail here:-s2h93hi@com
+email should end with .com
+------------------------------
+
+enter the gmail here:-mahesh1998@gmail.com
+Entered mail is correct
+'''
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
